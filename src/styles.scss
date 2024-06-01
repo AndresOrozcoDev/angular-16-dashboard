@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Colors
+$black-color: #000;
+$white-color: #fff;
+$blue-dark-color: #2e54ea;
+$gray-dark-color: #6d7280;
+$gray-ligth-color: #f9fafb;
+$error-color: #FF0000;
+$warning-color: #ffd700;
+$success-color: #28a745;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
