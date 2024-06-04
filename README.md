@@ -1,4 +1,4 @@
-# Angular17Dashboard
+# Angular 16 Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
@@ -66,13 +66,12 @@ src/
 
 ```
 
-## Resources 
+## Technology Stack and Features
 
-### Styles
-[Boostrap 5](https://getbootstrap.com/)
+- ⚡ [**Angular**](https://fastapi.tiangolo.com) for the frontend version 16.2.10.
+    - 🎨 [Boostrap 5](https://getbootstrap.com/) for styles.
+    - 🔍 [Font awesome](https://fontawesome.com/search?m=free&o=r) for icons.
+    - 🧰 [Google fonts](https://fonts.google.com/specimen/DM+Sans) for family font.
+    - ✅ [Karma](https://karma-runner.github.io) for unit test.
+- 🐋 [**Docker Compose**](https://www.docker.com) for development and production.
 
-### Icons
-[Font awesome](https://fontawesome.com/search?m=free&o=r)
-
-### Font
-[Google fonts](https://fonts.google.com/specimen/DM+Sans)
