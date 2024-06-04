@@ -11,19 +11,32 @@ Asegúrate de tener instalados los siguientes programas antes de ejecutar la apl
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run the next command for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+```bash
+ng serve
+```
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run the next command for generate a new component with lazy loading.
+
+```bash
+ng generate module modules/[name-module] --route [name-path] --module [name-module-main]
+
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run the next command for build the project. The build artifacts will be stored in the `dist/` directory.
+
+```bash
+ng build
+```
 
 ## Running unit tests
 
-Run the next comand for execute the unit tests via [Karma](https://karma-runner.github.io).
+Run the next command for execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ```bash
 ng test
@@ -31,7 +44,11 @@ ng test
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run the next command for execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+```bash
+ng e2e
+```
 
 ## Further help
 
