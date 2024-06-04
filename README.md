@@ -23,6 +23,7 @@ Run the next command for generate a new component with lazy loading.
 
 ```bash
 ng generate module modules/[name-module] --route [name-path] --module [name-module-main]
+ng g m modules/mod# --route mod# --module app.module.ts
 
 ```
 
