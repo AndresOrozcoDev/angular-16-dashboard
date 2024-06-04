@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  }
+  
 // Colors
 $black-color: #000;
 $white-color: #fff;
 $primary-color: #6E07F3;
-$gray-color: #E6ECF8;
+$gray-dark-color: #ccc;
+$gray-ligth-color: #f9f9f9;
 $error-color: #FF0000;
 $warning-color: #ffd700;
 $success-color: #28a745;
@@ -14,5 +20,29 @@ $success-color: #28a745;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+// Text 
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.paragrah {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.message {
+    font-size: 0.8rem;
+    font-weight: 500;
 }

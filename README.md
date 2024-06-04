@@ -25,3 +25,34 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+src/
+|-- app/
+|   |-- core/
+|   |   |-- services/
+|   |   |-- interceptors/
+|   |   |-- guards/
+|   |-- shared/
+|   |   |-- components/
+|   |   |-- directives/
+|   |   |-- pipes/
+|   |-- modules/
+|   |   |-- feature-module1/
+|   |   |   |-- components/
+|   |   |   |-- services/
+|   |   |   |-- feature1-routing.module.ts
+|   |   |   |-- feature1.module.ts
+|   |   |-- feature-module2/
+|   |   |   |-- components/
+|   |   |   |-- services/
+|   |   |   |-- feature2-routing.module.ts
+|   |   |   |-- feature2.module.ts
+|   |-- app-routing.module.ts
+|   |-- app.component.ts
+|   |-- app.module.ts
+|-- assets/
+|-- environments/
+
+
+Icons
+https://fontawesome.com/search?m=free&o=r
