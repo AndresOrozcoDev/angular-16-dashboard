@@ -69,13 +69,10 @@ src/
 ## Resources 
 
 ### Styles
-
-- [Boostrap 5](https://getbootstrap.com/)
+[Boostrap 5](https://getbootstrap.com/)
 
 ### Icons
-
-- [Font awesome](https://fontawesome.com/search?m=free&o=r)
+[Font awesome](https://fontawesome.com/search?m=free&o=r)
 
 ### Font
-
-- [Google fonts](https://fonts.google.com/specimen/DM+Sans)
+[Google fonts](https://fonts.google.com/specimen/DM+Sans)
