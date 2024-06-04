@@ -1,10 +1,10 @@
 # Angular 16 Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+User dashboard panel.
 
 ## Requirements
 
-Asegúrate de tener instalados los siguientes programas antes de ejecutar la aplicación:
+Make sure you have the following programs installed before running the application:
 
 - [Node (v22.2.0)](https://nodejs.org/en)
 - [Angular CLI (v16.2.10)](https://angular.io/cli)
