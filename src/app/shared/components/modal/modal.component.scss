@@ -1,8 +1,8 @@
 @import '../../../../styles.scss';
 
 .modal {
-  display: flex;
   z-index: 2;
+  display: flex;
   position: fixed;
   align-items: center;
   background: rgba(249, 249, 249, 0.6);
@@ -15,18 +15,19 @@
     margin-inline: auto;
     width: min(80%, 500px);
     border-radius: $border-radius;
-    border: 1px solid $gray-dark-color;
     background-color: $white-color;
+    border: 1px solid $gray-dark-color;
 
     .header {
       display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
+      align-items: center;
+      justify-content: center;
 
       i {
-        position: absolute;
         right: 0;
+        cursor: pointer;
+        position: absolute;
       }
     }
   }
