@@ -1,0 +1,13 @@
+# Archivos y directorios específicos de Angular que no necesitamos en la imagen Docker
+/node_modules
+/dist
+/e2e
+
+# Otros archivos y directorios que generalmente no son necesarios en la imagen Docker
+/.git
+/.vscode
+/.idea
+*.log
+*.tmp
+*.bak
+.DS_Store

@@ -3,8 +3,9 @@
 @font-face {
     font-family: 'DM Sans';
     src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
-  }
+}
   
+
 // Colors
 $black-color: #000;
 $white-color: #fff;
@@ -16,6 +17,11 @@ $warning-color: #ffd700;
 $success-color: #28a745;
 
 
+// Variables
+$header-height: 60px;
+
+
+// Global styles
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +32,27 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
+
+// Scroll
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: $gray-ligth-color; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background: $gray-dark-color; 
+}
+
+
 // Text 
 .title {
-    font-size: 1.5rem;
     font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .subtitle {
@@ -39,10 +62,58 @@ body {
 
 .paragrah {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .message {
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+table {
+    tr{
+        height: 40px;
+
+        &:hover {
+            background-color: $gray-ligth-color;
+        }
+
+        th {
+            @extend .paragrah;
+            text-align: center;
+            padding-inline: 10px;
+            text-transform: uppercase;
+            border: 1px solid $gray-dark-color;
+            background-color: $gray-ligth-color;
+        }
+
+        td { 
+            @extend .paragrah, .ellipsis;
+            padding-inline: 10px;
+            border: 1px solid $gray-dark-color;
+
+            &:first-child {
+                font-weight: 600; 
+            }
+        }
+    }
+}
+
+.icon {
+    cursor: pointer;
+}
+
+
+// Custom styles
+.cst-button {
+    @extend .paragrah;
+    width: 200px !important;
+    border-radius: 25px !important;
 }
