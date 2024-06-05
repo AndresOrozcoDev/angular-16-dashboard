@@ -6,7 +6,7 @@
                 <i class="fa-solid fa-magnifying-glass position-absolute"></i>
             </div>
             <div class="col d-flex justify-content-end">
-                <button type="button" class="cst-button btn btn-primary" title="Create new">
+                <button type="button" class="cst-button btn cst-button-primary" title="Create new" (click)="openmodal()">
                     <i class="fa-solid fa-plus"></i> Create new
                 </button>
             </div>
@@ -21,13 +21,13 @@
                         <th>Action</th>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Andres Orozco</td>
+                        <td><input type="checkbox" id="name"><label for="name">Andres Orozco</label></td>
                         <td>07/22/1997</td>
                         <td>aorozco@hotmail.com</td>
                         <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Juan Orozco</td>
+                        <td><input type="checkbox" id="name2"><label for="name2">Juan Orozco</label></td>
                         <td>07/22/1997</td>
                         <td>juanorozco@hotmail.com</td>
                         <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
@@ -37,3 +37,7 @@
         </div>
     </div>
 </div>
+
+<app-modal [title]="'Test'">
+    <P>Test</P>
+</app-modal>

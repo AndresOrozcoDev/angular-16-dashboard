@@ -1,0 +1,33 @@
+@import '../../../../styles.scss';
+
+.modal {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  align-items: center;
+  background: rgba(249, 249, 249, 0.6);
+  
+  &__content {
+    padding: 20px;
+    max-height: 75%;
+    overflow-y: auto;
+    position: relative;
+    margin-inline: auto;
+    width: min(80%, 500px);
+    border-radius: $border-radius;
+    border: 1px solid $gray-dark-color;
+    background-color: $white-color;
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      i {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

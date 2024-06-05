@@ -19,6 +19,7 @@ $success-color: #28a745;
 
 // Variables
 $header-height: 60px;
+$border-radius: 25px;
 
 
 // Global styles
@@ -95,12 +96,17 @@ table {
         }
 
         td { 
-            @extend .paragrah, .ellipsis;
             padding-inline: 10px;
+            @extend .paragrah, .ellipsis;
             border: 1px solid $gray-dark-color;
 
-            &:first-child {
+            label{
                 font-weight: 600; 
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent;
+                }
             }
         }
     }
@@ -116,4 +122,22 @@ table {
     @extend .paragrah;
     width: 200px !important;
     border-radius: 25px !important;
+
+    &-primary {
+        color: $white-color;
+        border-color: $primary-color;
+        background-color: $primary-color;
+
+        &:hover {
+            color: $white-color;
+            border-color: rgbA(110, 7, 243, 0.6);
+            background-color: rgbA(110, 7, 243, 0.6);
+        }
+    }
+}
+
+
+input[type="checkbox"] {
+    accent-color: $primary-color;
+    cursor: pointer;
 }

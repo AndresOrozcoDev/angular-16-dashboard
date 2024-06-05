@@ -1,0 +1,11 @@
+<div class="modal" *ngIf="showModal">
+    <div class="modal__content">
+      <div class="header">
+        <span class="title">{{ title }}</span>
+        <i class="fa-solid fa-xmark fa-2x" (click)="closeModal()" title="Close" aria-hidden="true"></i>
+      </div>
+      <div class="body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+</div>
