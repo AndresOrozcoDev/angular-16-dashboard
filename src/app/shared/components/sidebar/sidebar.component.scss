@@ -1,55 +1,60 @@
-  .sidebar {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    height: 100vh;
-    transition: 0.3s;
-    width: 0px;
-    background: #1d1e2c;
-    color: #6d6e7e;
+@import '../../../../styles.scss';
 
-    &.expanded {
-      width: 200px;
-    }
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  height: 100vh;
+  transition: 0.3s;
+  width: 0px;
+  background: #1a202c;
 
+  &.expanded {
+    width: 200px;
     .content {
-      .section {
-        .paragrah {
-          transition: 0.3s;
-          overflow: hidden;
-          color: white;
-        }
-      }
-
       .link {
-        .content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 10px;
-          cursor: pointer;
-          transition: 0.3s;
-
-          &:hover {
-            background: #0f1017;
-
-            .subtitle {
-              color: white;
-            }
-          }
-
-          &.active {
-            background-color: #0f1017;
-          }
-
-          .subtitle {
-            flex: 1;
-            color: #6d6e7e;
-            transition: 0.3s;
-            overflow: hidden;
-            color: white;
+        .content{
+          &.active{
+            background: #323e55;
           }
         }
       }
     }
   }
+
+  .content {
+    .section {
+      .paragrah {
+        transition: 0.3s;
+        overflow: hidden;
+        color: $white-color;
+      }
+    }
+
+    .link {
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: #323e55;
+
+          .subtitle {
+            color: $white-color;
+          }
+        }
+
+        .subtitle {
+          flex: 1;
+          transition: 0.3s;
+          overflow: hidden;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
