@@ -1,18 +1,24 @@
 <div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
     <div class="content">
+        <div class="section">
+            <div class="paragrah">Menu</div>
+        </div>
         <div class="link">
             <div class="content" [routerLink]="['/mod1']" [routerLinkActive]="'active'">
-                <div class="title">Home</div>
+                <div class="subtitle">Mod1</div>
             </div>
         </div>
         <div class="link">
             <div class="content" [routerLink]="['/mod2']" [routerLinkActive]="'active'">
-                <div class="title">Configuration</div>
+                <div class="subtitle">Mod2</div>
             </div>
+        </div>
+        <div class="section">
+            <div class="paragrah">Menu</div>
         </div>
         <div class="link">
             <div class="content" [routerLink]="['/mod3']" [routerLinkActive]="'active'">
-                <div class="title">Bookings</div>
+                <div class="subtitle">Mod3</div>
             </div>
         </div>
         <div class="footer"></div>

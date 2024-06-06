@@ -12,8 +12,15 @@
       width: 200px;
     }
 
-
     .content {
+      .section {
+        .paragrah {
+          transition: 0.3s;
+          overflow: hidden;
+          color: white;
+        }
+      }
+
       .link {
         .content {
           display: flex;
@@ -26,22 +33,21 @@
           &:hover {
             background: #0f1017;
 
-            .title {
+            .subtitle {
               color: white;
             }
           }
 
           &.active {
-            .title {
-              color: white;
-            }
+            background-color: #0f1017;
           }
 
-          .title {
+          .subtitle {
             flex: 1;
             color: #6d6e7e;
             transition: 0.3s;
             overflow: hidden;
+            color: white;
           }
         }
       }
