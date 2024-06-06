@@ -1,0 +1,20 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+    <div class="content">
+        <div class="link">
+            <div class="content" [routerLink]="['/mod1']" [routerLinkActive]="'active'">
+                <div class="title">Home</div>
+            </div>
+        </div>
+        <div class="link">
+            <div class="content" [routerLink]="['/mod2']" [routerLinkActive]="'active'">
+                <div class="title">Configuration</div>
+            </div>
+        </div>
+        <div class="link">
+            <div class="content" [routerLink]="['/mod3']" [routerLinkActive]="'active'">
+                <div class="title">Bookings</div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</div>

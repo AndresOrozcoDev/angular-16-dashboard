@@ -4,6 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NotifyComponent } from './components/notify/notify.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,15 +14,18 @@ import { NotifyComponent } from './components/notify/notify.component';
     HeaderComponent,
     ModalComponent,
     LoadingComponent,
-    NotifyComponent
+    NotifyComponent,
+    SidebarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ], exports: [
     HeaderComponent,
     ModalComponent,
     LoadingComponent,
-    NotifyComponent
+    NotifyComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }

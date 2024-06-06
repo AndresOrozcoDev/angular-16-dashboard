@@ -61,10 +61,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 src/
 |-- app/
-|   |-- core/
-|   |   |-- services/
-|   |   |-- interceptors/
-|   |   |-- guards/
 |   |-- shared/
 |   |   |-- components/
 |   |   |-- directives/
@@ -85,7 +81,6 @@ src/
 |   |-- app.module.ts
 |-- assets/
 |-- environments/
-
 ```
 
 ## Technology Stack and Features
