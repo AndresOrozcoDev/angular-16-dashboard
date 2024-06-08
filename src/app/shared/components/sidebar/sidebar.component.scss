@@ -1,14 +1,15 @@
 @import '../../../../styles.scss';
 
 .sidebar {
-  position: fixed;
   left: 0;
   top: 60px;
-  height: calc(100vh - 60px);
-  transition: 0.3s;
   width: 0px;
-  background: #1a202c;
+  z-index: 1;
+  position: fixed;
+  transition: 0.3s;
   padding-bottom: 1rem;
+  background: #1a202c;
+  height: calc(100vh - 60px);
 
   &.expanded {
     width: 200px;
@@ -18,14 +19,17 @@
           &.active{
             background: #323e55;
           }
+          &:hover{
+            background: #323e55;
+          }
         }
       }
     }
   }
 
   .content {
-    position: relative;
     height: 100%;
+    position: relative;
     .section {
       .message {
         transition: 0.3s;
@@ -34,22 +38,22 @@
       }
     }
     .footer {
-      position: absolute;
       bottom: 0;
       width: 100%;
+      position: absolute;
     }
 
     .link {
       .content {
         display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 10px;
         cursor: pointer;
         transition: 0.3s;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
-          background: #323e55;
+          background: $white-color;
 
           .subtitle {
             color: $white-color;

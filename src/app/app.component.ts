@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  sidebarExpanded = true;
+  sidebarExpanded: boolean = false;
+  isLogged: boolean = true;
 
 }

@@ -61,6 +61,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 src/
 |-- app/
+|   |-- core/
 |   |-- shared/
 |   |   |-- components/
 |   |   |-- directives/
