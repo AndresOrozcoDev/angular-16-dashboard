@@ -1,0 +1,9 @@
+@import '../../../../../styles.scss';
+
+.container {
+
+    &__form {
+        border-radius: $border-radius;
+        border: 1px solid $gray-dark-color;
+    }
+}

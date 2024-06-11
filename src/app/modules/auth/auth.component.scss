@@ -1,0 +1,32 @@
+@import '../../../styles.scss';
+
+.container-fluid {
+
+    .container__tab {
+        margin-inline: auto;
+        width: min(100% - 40px, 400px);
+        
+        .nav-tabs {
+            padding: 0.3rem;
+            height: $btn-input-height;
+            border-radius: $border-radius;
+            background-color: $gray-ligth-color;
+
+            .nav-item {
+                .nav-link {
+                    width: 100%;
+                    color: $gray-dark-color;
+                    border-radius: $border-radius;
+
+                    &.active {
+                        color: $black-color;
+                    }
+
+                    &:hover {
+                        border-color: $gray-ligth-color;
+                    }
+                }
+            }
+        }
+    }
+}

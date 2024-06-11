@@ -19,7 +19,8 @@ $success-color: #28a745;
 
 // Variables
 $header-height: 60px;
-$border-radius: 25px;
+$border-radius: 10px;
+$btn-input-height: 40px;
 
 
 // Global styles
@@ -120,8 +121,9 @@ table {
 // Custom styles
 .cst-button {
     @extend .paragrah;
-    width: 200px !important;
-    border-radius: 25px !important;
+    width: 200px;
+    height: $btn-input-height;
+    border-radius: $border-radius !important;
 
     &-primary {
         color: $white-color;
@@ -140,4 +142,12 @@ table {
 input[type="checkbox"] {
     accent-color: $primary-color;
     cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    outline: none;
+    height: $btn-input-height;
+    padding-inline-start: 10px;
+    border-radius: $border-radius;
+    border: 1px solid $gray-dark-color;
 }
