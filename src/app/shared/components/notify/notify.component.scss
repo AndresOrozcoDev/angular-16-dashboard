@@ -1,0 +1,16 @@
+@import '../../../../styles.scss';
+
+.notify {
+    right: 10px;
+    bottom: 20px;
+    z-index: 99999;
+    position: fixed;
+    color: $white-color;
+    padding: 0.5rem 7rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error { background-color: $error-color; }
+.warning { background-color: $warning-color; }
+.success { background-color: $success-color; }

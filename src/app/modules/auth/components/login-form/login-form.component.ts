@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotifyService } from 'src/app/shared/services/notify.service';
 
 @Component({
   selector: 'app-login-form',
@@ -15,14 +16,14 @@ export class LoginFormComponent {
   });
   
 
-  constructor(private router: Router,) { }
+  constructor(private router: Router, private notify: NotifyService) { }
 
   signin() {    
     if(this.loginForm.valid) {
       localStorage.setItem('user', JSON.stringify(this.loginForm.value))
       this.router.navigate(['/mod1']);
     } else {
-      // this.notify.notify('Empty fields.', 'error')
+      this.notify.notify('Empty fields.', 'error')
     }
   }
 }

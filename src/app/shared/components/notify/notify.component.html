@@ -1,1 +1,3 @@
-<p>notify works!</p>
+<div *ngIf="message" class="notify" [ngClass]="notifyClass">
+    {{ message }}
+  </div>
