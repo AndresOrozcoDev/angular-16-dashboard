@@ -4,11 +4,11 @@
         <form class="mt-4" [formGroup]="registerForm">
             <div class="form_group d-flex flex-column gap-2 mt-2">
                 <label for="register_email"> Email</label>
-                    <input type="text" id="register_email" autocomplete="off" placeholder="name@example.com">
+                    <input type="text" id="register_email" formControlName="email" autocomplete="off" placeholder="name@example.com">
             </div>
             <div class="form_group d-flex flex-column gap-2 mt-2">
                 <label for="register_password">Password</label>
-                    <input type="password" id="register_password">
+                    <input type="password" id="register_password" formControlName="password">
             </div>
             <div class="form_btn mt-5">
                 <button class="cst-button btn cst-button-primary w-100" (click)="register()">Sign up</button>
