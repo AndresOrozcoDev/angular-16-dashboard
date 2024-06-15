@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -13,8 +14,15 @@ export class LoginFormComponent {
     password: new FormControl('', [Validators.required]),
   });
   
-  signin() {
-    console.log('Sign in...');
-    
+
+  constructor(private router: Router,) { }
+
+  signin() {    
+    if(this.loginForm.valid) {
+      localStorage.setItem('user', JSON.stringify(this.loginForm.value))
+      this.router.navigate(['/mod1']);
+    } else {
+      // this.notify.notify('Empty fields.', 'error')
+    }
   }
 }

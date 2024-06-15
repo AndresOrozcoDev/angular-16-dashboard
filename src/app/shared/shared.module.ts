@@ -20,7 +20,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule
-  ], exports: [
+  ], 
+  exports: [
     HeaderComponent,
     ModalComponent,
     LoadingComponent,

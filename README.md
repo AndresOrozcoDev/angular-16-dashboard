@@ -66,6 +66,7 @@ src/
 |   |   |-- components/
 |   |   |-- directives/
 |   |   |-- pipes/
+|   |   |-- guards/
 |   |-- modules/
 |   |   |-- feature-module1/
 |   |   |   |-- components/
