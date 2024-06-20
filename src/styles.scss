@@ -151,8 +151,8 @@ table {
 
 
 input[type="checkbox"] {
-    accent-color: $primary-color;
     cursor: pointer;
+    accent-color: $primary-color;
 }
 
 input[type="text"], input[type="password"], input[type="number"], select {
@@ -160,5 +160,12 @@ input[type="text"], input[type="password"], input[type="number"], select {
     height: $btn-input-height;
     padding-inline-start: 10px;
     border-radius: $border-radius;
+    background-color: $white-color;
     border: 1px solid $gray-dark-color;
+
+    &:hover, &:focus, &:active, &:focus-visible {
+        color: $black-color !important;
+        border-color: $gray-dark-color !important;
+        background-color: $white-color !important;
+    }
 }
