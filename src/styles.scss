@@ -80,6 +80,9 @@ body {
 
 
 table {
+    width: 100%;
+    table-layout: fixed;
+
     tr{
         height: 40px;
 
@@ -88,7 +91,7 @@ table {
         }
 
         th {
-            @extend .paragrah;
+            @extend .paragrah, .ellipsis;
             text-align: center;
             padding-inline: 10px;
             text-transform: uppercase;
@@ -100,6 +103,14 @@ table {
             padding-inline: 10px;
             @extend .paragrah, .ellipsis;
             border: 1px solid $gray-dark-color;
+
+            &:not(first-child) {
+                text-align: center;
+            }
+
+            &:first-child {
+                text-align: start;
+            }
 
             label{
                 font-weight: 600; 

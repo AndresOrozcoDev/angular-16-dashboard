@@ -1,3 +1,5 @@
+@import '../../../../styles.scss';
+
 .loading-overlay {
     top: 0;
     left: 0;
@@ -16,8 +18,8 @@
     height: 50px;
     border-radius: 50%;
     border: 6px solid #f3f3f3;
-    border-top: 6px solid #3498db;
     animation: spin 1s linear infinite;
+    border-top: 6px solid $primary-color;
 }
 
 @keyframes spin {

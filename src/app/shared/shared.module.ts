@@ -6,6 +6,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { NotifyComponent } from './components/notify/notify.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     ModalComponent,
     LoadingComponent,
     NotifyComponent,
-    SidebarComponent
+    SidebarComponent,
+    CurrencyFormatPipe
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { RouterModule } from '@angular/router';
     ModalComponent,
     LoadingComponent,
     NotifyComponent,
-    SidebarComponent
+    SidebarComponent,
+    CurrencyFormatPipe
   ]
 })
 export class SharedModule { }

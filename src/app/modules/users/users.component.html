@@ -1,0 +1,45 @@
+<div class="panel">
+    <div class="column panel__column">
+        <div class="row panel__row">
+            <div class="col d-flex position-relative justify-content-start align-items-center container_input_icon">
+                <input type="text" class="cst-button btn btn-light text-center" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass position-absolute"></i>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="cst-button btn cst-button-primary" title="Create new" (click)="openmodal()">
+                    <i class="fa-solid fa-plus"></i> Create new
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col table-responsive">
+                <table class="w-100 table">
+                    <tr>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Country</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr *ngFor="let user of users">
+                        <td><input type="checkbox" id="name"><label for="name">{{user.name.first}}</label></td>
+                        <td>{{user.dob.date}}</td>
+                        <td>{{user.dob.age}}</td>
+                        <td>{{user.gender}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.location.country}}</td>
+                        <td>{{user.phone}}</td>
+                        <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal [title]="'Test'">
+    <P>Test</P>
+</app-modal>

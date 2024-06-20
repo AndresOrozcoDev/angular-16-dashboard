@@ -16,20 +16,22 @@
                 <table class="w-100 table">
                     <tr>
                         <th>Name</th>
-                        <th>DOB</th>
-                        <th>Email</th>
+                        <th>Created</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                        <th>Category</th>
+                        <th>Supermarket</th>
                         <th>Action</th>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="name"><label for="name">Andres Orozco</label></td>
+                        <td><input type="checkbox" id="name"><label for="name">Leche</label></td>
                         <td>07/22/1997</td>
-                        <td>aorozco@hotmail.com</td>
-                        <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" id="name2"><label for="name2">Juan Orozco</label></td>
-                        <td>07/22/1997</td>
-                        <td>juanorozco@hotmail.com</td>
+                        <td>{{ 2.99 | currencyFormat }}</td>
+                        <td>5</td>
+                        <td>Litros</td>
+                        <td>Alimentos</td>
+                        <td>Aldi</td>
                         <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
                     </tr>
                 </table>

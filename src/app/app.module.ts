@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     AppRoutingModule,
     SharedModule,
     CoreModule, 
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [
     {

@@ -4,9 +4,8 @@ import { authGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
-  { path: 'mod1', pathMatch: 'full', loadChildren: () => import('./modules/mod1/mod1.module').then(m => m.Mod1Module), canActivate: [authGuard] }, 
-  { path: 'mod2', pathMatch: 'full', loadChildren: () => import('./modules/mod2/mod2.module').then(m => m.Mod2Module), canActivate: [authGuard] },
-  { path: 'mod3', pathMatch: 'full', loadChildren: () => import('./modules/mod3/mod3.module').then(m => m.Mod3Module), canActivate: [authGuard] },
+  { path: 'products', pathMatch: 'full', loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule), canActivate: [authGuard] },
+  { path: 'users', pathMatch: 'full', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule), canActivate: [authGuard] },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
