@@ -16,22 +16,22 @@
                 <table class="w-100 table">
                     <tr>
                         <th>Name</th>
-                        <th>Created</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Unit</th>
+                        <th>Created</th>
                         <th>Category</th>
                         <th>Supermarket</th>
                         <th>Action</th>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox" id="name"><label for="name">Leche</label></td>
-                        <td>07/22/1997</td>
-                        <td>{{ 2.99 | currencyFormat }}</td>
-                        <td>5</td>
-                        <td>Litros</td>
-                        <td>Alimentos</td>
-                        <td>Aldi</td>
+                    <tr *ngFor="let product of products">
+                        <td><input type="checkbox" id="name"><label for="name">{{product.name}}</label></td>
+                        <td>{{product.price | currencyFormat}}</td>
+                        <td>{{product.value}}</td>
+                        <td>{{product.unit}}</td>
+                        <td>{{product.created}}</td>
+                        <td>{{product.supermarket_id}}</td>
+                        <td>{{product.category_id}}</td>
                         <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
                     </tr>
                 </table>
@@ -40,6 +40,6 @@
     </div>
 </div>
 
-<app-modal [title]="'Test'">
-    <P>Test</P>
+<app-modal [title]="'Create Product'">
+    <app-create-form></app-create-form>
 </app-modal>

@@ -1,0 +1,37 @@
+<form class="mt-4" [formGroup]="createProductForm">
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="name">Name</label>
+            <input type="text" id="name" name="name" formControlName="name" placeholder="Product" inputmode="text">
+    </div>
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="price">Price</label>
+            <input type="number" id="price" name="price" formControlName="price" placeholder="$ 2.99" inputmode="numeric">
+    </div>
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="value">Value</label>
+            <input type="number" id="value" name="value" formControlName="value" placeholder="5" inputmode="numeric">
+    </div>
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="unit">Unit</label>
+            <input type="number" id="unit" name="unit" formControlName="unit" placeholder="Lb" inputmode="text">
+    </div>
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="category">Category</label>
+        <select formControlName="category" name="category" id="category">
+            <option disabled selected value="">Category</option>
+            <option value="1">Aldi</option>
+            <option value="2">Costco</option>
+        </select>
+    </div>
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="supermarket">Supermarket</label>
+        <select formControlName="supermarket" name="supermarket" id="supermarket">
+            <option disabled selected value="">Supermarket</option>
+            <option value="1">Aldi</option>
+            <option value="2">Costco</option>
+        </select>
+    </div>
+    <div class="form_btn mt-5">
+        <button class="cst-button btn cst-button-primary w-100" (click)="createProduct()" title="Create product">Create</button>
+    </div>
+</form>

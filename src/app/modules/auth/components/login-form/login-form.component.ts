@@ -20,7 +20,7 @@ export class LoginFormComponent {
   signin() {    
     if(this.loginForm.valid) {
       localStorage.setItem('user', JSON.stringify(this.loginForm.value))
-      this.router.navigate(['/mod1']);
+      this.router.navigate(['/users']);
     } else {
       this.notifyService.notify('Empty fields.', 'error')
     }

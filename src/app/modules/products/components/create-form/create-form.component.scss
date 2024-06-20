@@ -1,0 +1,10 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .form_group, .form_btn {
+        flex: 1 0 200px;
+    }
+
+}

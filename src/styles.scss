@@ -155,7 +155,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="number"], select {
     outline: none;
     height: $btn-input-height;
     padding-inline-start: 10px;

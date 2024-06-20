@@ -20,7 +20,7 @@ export class RegisterFormComponent {
   register() {    
     if(this.registerForm.valid) {
       localStorage.setItem('user', JSON.stringify(this.registerForm.value))
-      this.router.navigate(['/mod1']);
+      this.router.navigate(['/users']);
     } else {
       this.notifyService.notify('Empty fields.', 'error')
     }
