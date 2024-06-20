@@ -15,14 +15,14 @@ export class RegisterFormComponent {
     password: new FormControl('', [Validators.required]),
   });
   
-  constructor(private router: Router, private notify: NotifyService) { }
+  constructor(private router: Router, private notifyService: NotifyService) { }
 
   register() {    
     if(this.registerForm.valid) {
       localStorage.setItem('user', JSON.stringify(this.registerForm.value))
       this.router.navigate(['/mod1']);
     } else {
-      this.notify.notify('Empty fields.', 'error')
+      this.notifyService.notify('Empty fields.', 'error')
     }
   }
 

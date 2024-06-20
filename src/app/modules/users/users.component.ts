@@ -19,7 +19,8 @@ export class UsersComponent {
     }
 
   openmodal() {
-    this.modalComponent.openModal();
+    // this.modalComponent.openModal();
+    this.notifyService.notify("You can't create.", 'error');
   }
 
   getUsers() {

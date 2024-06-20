@@ -22,7 +22,7 @@
                 <div class="message">Menu</div>
             </div>
             <div class="link">
-                <div class="content ps-4" [routerLink]="['/']" [routerLinkActive]="'active'">
+                <div class="content ps-4" (click)="logout()" [routerLinkActive]="'active'">
                     <div class="subtitle">Sign out</div>
                 </div>
             </div>

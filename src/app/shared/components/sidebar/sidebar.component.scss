@@ -16,6 +16,7 @@
     .content {
       .link {
         .content{
+          padding: 10px 0 10px 16px !important;
           &.active{
             background: #323e55;
           }
@@ -46,10 +47,10 @@
     .link {
       .content {
         display: flex;
-        padding: 10px;
         cursor: pointer;
         transition: 0.3s;
         align-items: center;
+        padding: 0 !important;
         justify-content: center;
 
         &:hover {
@@ -57,6 +58,7 @@
 
           .subtitle {
             color: $white-color;
+            padding: 0 !important;
           }
         }
 

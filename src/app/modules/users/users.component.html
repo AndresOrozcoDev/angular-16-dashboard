@@ -26,7 +26,7 @@
                     </tr>
                     <tr *ngFor="let user of users">
                         <td><input type="checkbox" id="name"><label for="name">{{user.name.first}}</label></td>
-                        <td>{{user.dob.date}}</td>
+                        <td>{{user.dob.date | date}}</td>
                         <td>{{user.dob.age}}</td>
                         <td>{{user.gender}}</td>
                         <td>{{user.email}}</td>
