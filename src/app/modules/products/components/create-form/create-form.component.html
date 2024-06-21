@@ -19,16 +19,14 @@
         <label for="category">Category</label>
         <select formControlName="category" name="category" id="category">
             <option disabled selected value="">Category</option>
-            <option value="1">Aldi</option>
-            <option value="2">Costco</option>
+            <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
         </select>
     </div>
     <div class="form_group d-flex flex-column gap-2 mt-2">
         <label for="supermarket">Supermarket</label>
         <select formControlName="supermarket" name="supermarket" id="supermarket">
             <option disabled selected value="">Supermarket</option>
-            <option value="1">Aldi</option>
-            <option value="2">Costco</option>
+            <option *ngFor="let supermarket of supermarkets" [value]="supermarket.id">{{ supermarket.name }}</option>
         </select>
     </div>
     <div class="form_btn mt-5">
