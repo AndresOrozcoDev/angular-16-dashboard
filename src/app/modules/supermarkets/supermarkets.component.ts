@@ -34,4 +34,9 @@ export class SupermarketsComponent {
     })
   }
 
+  refresh() {
+    this.getSupermarkets();
+    this.modalComponent.closeModal();
+  }
+
 }

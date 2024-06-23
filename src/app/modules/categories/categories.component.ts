@@ -34,4 +34,9 @@ export class CategoriesComponent {
     })
   }
 
+  refresh() {
+    this.getCategories();
+    this.modalComponent.closeModal();
+  }
+
 }
