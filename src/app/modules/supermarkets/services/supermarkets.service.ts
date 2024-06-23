@@ -8,7 +8,7 @@ import { SupermarketResponse } from '../models/supermarkets';
 })
 export class SupermarketsService {
 
-  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/supermarket/all';
+  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/supermarket';
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +17,15 @@ export class SupermarketsService {
       'accept': 'application/json',
       'api-key': 'development'
     });
-    return this.http.get<SupermarketResponse>(this.urlBase, {headers: headers}) 
+    return this.http.get<SupermarketResponse>(this.urlBase + '/all', {headers: headers}) 
   }
+
+  postSupermarket(name: string): Observable<SupermarketResponse> {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'api-key': 'development'
+    });    
+    return this.http.post<SupermarketResponse>(this.urlBase, name, {headers: headers})
+  }
+
 }

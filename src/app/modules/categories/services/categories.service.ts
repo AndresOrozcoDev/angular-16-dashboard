@@ -8,7 +8,7 @@ import { CategoryResponse } from '../models/categories';
 })
 export class CategoriesService {
 
-  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/categories/all';
+  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/categories';
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,15 @@ export class CategoriesService {
       'accept': 'application/json',
       'api-key': 'development'
     });
-    return this.http.get<CategoryResponse>(this.urlBase, {headers: headers}) 
+    return this.http.get<CategoryResponse>(this.urlBase + '/all', {headers: headers}) 
+  }
+
+  postCategories(name: string): Observable<CategoryResponse> {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'api-key': 'development'
+    });    
+    return this.http.post<CategoryResponse>(this.urlBase, name, {headers: headers})
   }
 
 }

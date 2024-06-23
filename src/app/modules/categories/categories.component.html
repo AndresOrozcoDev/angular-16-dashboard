@@ -1,1 +1,35 @@
-<p>categories works!</p>
+<div class="panel">
+    <div class="column panel__column">
+        <div class="row panel__row">
+            <div class="col d-flex position-relative justify-content-start align-items-center container_input_icon">
+                <input type="text" class="cst-button btn btn-light text-center" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass position-absolute"></i>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="cst-button btn cst-button-primary" title="Create new" (click)="openmodal()">
+                    <i class="fa-solid fa-plus"></i> Create new
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col table-responsive">
+                <table class="w-100 table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr *ngFor="let category of categories">
+                        <td><input type="checkbox" id="name"><label for="name">{{category.id}}</label></td>
+                        <td>{{category.name}}</td>
+                        <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal [title]="'Create Category'">
+    <app-create-form></app-create-form>
+</app-modal>

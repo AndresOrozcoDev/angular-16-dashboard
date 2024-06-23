@@ -1,0 +1,9 @@
+<form class="mt-4" [formGroup]="createCategoryForm">
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="category">Category</label>
+            <input type="text" id="category" name="category" formControlName="category" placeholder="Category" inputmode="text">
+    </div>
+    <div class="form_btn mt-4">
+        <button class="cst-button btn cst-button-primary w-100" (click)="createCategory()" title="Create Category">Create</button>
+    </div>
+</form>

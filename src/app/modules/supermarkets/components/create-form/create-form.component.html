@@ -1,0 +1,9 @@
+<form class="mt-4" [formGroup]="createSupermarketForm">
+    <div class="form_group d-flex flex-column gap-2 mt-2">
+        <label for="supermarket">Supermarket</label>
+            <input type="text" id="supermarket" name="supermarket" formControlName="supermarket" placeholder="Supermarket" inputmode="text">
+    </div>
+    <div class="form_btn mt-4">
+        <button class="cst-button btn cst-button-primary w-100" (click)="createSupermarket()" title="Create supermarket">Create</button>
+    </div>
+</form>

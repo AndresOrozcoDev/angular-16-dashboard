@@ -11,6 +11,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.error { background-color: $error-color; }
-.warning { background-color: $warning-color; }
-.success { background-color: $success-color; }
+.error { background-color: rgba(255, 0, 0, 0.5); }
+.warning { background-color: rgba(255, 215, 0, 0.5); }
+.success { background-color: rgba(40, 167, 69, 0.5) }
