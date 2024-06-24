@@ -42,4 +42,9 @@ export class ProductsComponent {
     })
   }
 
+  refresh() {
+    this.getProducts();
+    this.modalComponent.closeModal();
+  }
+
 }

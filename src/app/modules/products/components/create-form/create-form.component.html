@@ -13,18 +13,18 @@
     </div>
     <div class="form_group d-flex flex-column gap-2 mt-2">
         <label for="unit">Unit</label>
-            <input type="number" id="unit" name="unit" formControlName="unit" placeholder="Lb" inputmode="text">
+            <input type="text" id="unit" name="unit" formControlName="unit" placeholder="Lb" inputmode="text">
     </div>
     <div class="form_group d-flex flex-column gap-2 mt-2">
         <label for="category">Category</label>
-        <select formControlName="category" name="category" id="category">
+        <select formControlName="category_id" name="category_id" id="category_id">
             <option disabled selected value="">Category</option>
             <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
         </select>
     </div>
     <div class="form_group d-flex flex-column gap-2 mt-2">
         <label for="supermarket">Supermarket</label>
-        <select formControlName="supermarket" name="supermarket" id="supermarket">
+        <select formControlName="supermarket_id" name="supermarket_id" id="supermarket_id">
             <option disabled selected value="">Supermarket</option>
             <option *ngFor="let supermarket of supermarkets" [value]="supermarket.id">{{ supermarket.name }}</option>
         </select>

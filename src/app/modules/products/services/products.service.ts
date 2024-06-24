@@ -1,14 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProductResponse } from '../models/products';
+import { Product, ProductResponse } from '../models/products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/product/all';
+  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/product/';
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +17,14 @@ export class ProductsService {
       'accept': 'application/json',
       'api-key': 'development'
     });
-    return this.http.get<ProductResponse>(this.urlBase, {headers: headers}) 
+    return this.http.get<ProductResponse>(this.urlBase + 'all', {headers: headers}) 
+  }
+
+  postProduct(product: Product): Observable<ProductResponse> {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'api-key': 'development'
+    });    
+    return this.http.post<ProductResponse>(this.urlBase, product, {headers: headers})
   }
 }
