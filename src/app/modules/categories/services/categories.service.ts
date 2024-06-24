@@ -8,7 +8,7 @@ import { CategoryResponse } from '../models/categories';
 })
 export class CategoriesService {
 
-  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/categories';
+  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/category';
 
   constructor(private http: HttpClient) { }
 

@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             <div class="col table-responsive">
-                <table class="w-100 table">
+                <table *ngIf="categories.length !== 0" class="w-100 table">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -25,6 +25,7 @@
                         <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
                     </tr>
                 </table>
+                <p *ngIf="categories.length === 0" class="message message--error text-center">NOT FOUND DATA</p>
             </div>
         </div>
     </div>

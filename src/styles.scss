@@ -70,6 +70,8 @@ body {
 .message {
     font-size: .8rem;
     font-weight: 400;
+
+    &--error{ color: $error-color; }
 }
 
 .ellipsis {
