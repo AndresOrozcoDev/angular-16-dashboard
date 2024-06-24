@@ -138,6 +138,10 @@ table {
     height: $btn-input-height;
     border-radius: $border-radius !important;
 
+    @media (max-width: 475px) {
+        width: 150px;  
+    }
+
     &-primary {
         color: $white-color;
         border-color: $primary-color;
