@@ -25,7 +25,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
 
 # Copiar los archivos compilados al directorio de Nginx
-COPY --from=builder /app/dist/angular-17-dashboard /usr/share/nginx/html
+COPY --from=builder /app/dist/angular-16-dashboard /usr/share/nginx/html
 
 # Exponer el puerto 80 para acceder al servidor web
 EXPOSE 80
