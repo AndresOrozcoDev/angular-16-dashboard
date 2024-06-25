@@ -15,7 +15,7 @@ export class CategoriesService {
   getCategories(): Observable<CategoryResponse> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'api-key': 'development'
+      'API_KEY': 'development'
     });
     return this.http.get<CategoryResponse>(this.urlBase + '/all', {headers: headers}) 
   }
@@ -23,7 +23,7 @@ export class CategoriesService {
   postCategories(name: string): Observable<CategoryResponse> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'api-key': 'development'
+      'API_KEY': 'development'
     });    
     return this.http.post<CategoryResponse>(this.urlBase, name, {headers: headers})
   }

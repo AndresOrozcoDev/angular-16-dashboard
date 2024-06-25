@@ -43,6 +43,14 @@ Run the next command for execute the unit tests via [Karma](https://karma-runner
 ng test
 ```
 
+## Running unit tests with coverage
+
+Run the next command for execute the unit tests via [Karma](https://karma-runner.github.io) The report is a bunch of HTML files you can open with a browser. Start by opening `coverage/index.html` in the browser of your choice.
+
+```bash
+ng test --code-coverage
+```
+
 ## Running end-to-end tests
 
 Run the next command for execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.

@@ -15,7 +15,7 @@ export class SupermarketsService {
   getSupermarkets(): Observable<SupermarketResponse> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'api-key': 'development'
+      'API_KEY': 'development'
     });
     return this.http.get<SupermarketResponse>(this.urlBase + '/all', {headers: headers}) 
   }
@@ -23,7 +23,7 @@ export class SupermarketsService {
   postSupermarket(name: string): Observable<SupermarketResponse> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'api-key': 'development'
+      'API_KEY': 'development'
     });    
     return this.http.post<SupermarketResponse>(this.urlBase, name, {headers: headers})
   }

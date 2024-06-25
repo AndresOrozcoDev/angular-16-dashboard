@@ -15,7 +15,7 @@ export class ProductsService {
   getProducts(): Observable<ProductResponse> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'api-key': 'development'
+      'API_KEY': 'development'
     });
     return this.http.get<ProductResponse>(this.urlBase + 'all', {headers: headers}) 
   }
@@ -23,7 +23,7 @@ export class ProductsService {
   postProduct(product: Product): Observable<ProductResponse> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'api-key': 'development'
+      'API_KEY': 'development'
     });    
     return this.http.post<ProductResponse>(this.urlBase, product, {headers: headers})
   }
