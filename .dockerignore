@@ -2,6 +2,7 @@
 /node_modules
 /dist
 /e2e
+/coverage
 
 # Otros archivos y directorios que generalmente no son necesarios en la imagen Docker
 /.git

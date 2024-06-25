@@ -51,6 +51,8 @@ Run the next command for execute the unit tests via [Karma](https://karma-runner
 ng test --code-coverage
 ```
 
+![Coverage of the project in unit tests.](./src/assets/img/test_coverage.PNG)
+
 ## Running end-to-end tests
 
 Run the next command for execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
