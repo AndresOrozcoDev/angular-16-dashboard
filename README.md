@@ -75,19 +75,17 @@ src/
 |   |-- shared/
 |   |   |-- components/
 |   |   |-- directives/
-|   |   |-- pipes/
 |   |   |-- guards/
+|   |   |-- interceptors/
+|   |   |-- pipes/
+|   |   |-- services/
 |   |-- modules/
-|   |   |-- feature-module1/
+|   |   |-- module1/
 |   |   |   |-- components/
+|   |   |   |-- models/
 |   |   |   |-- services/
-|   |   |   |-- feature1-routing.module.ts
-|   |   |   |-- feature1.module.ts
-|   |   |-- feature-module2/
-|   |   |   |-- components/
-|   |   |   |-- services/
-|   |   |   |-- feature2-routing.module.ts
-|   |   |   |-- feature2.module.ts
+|   |   |   |-- module1-routing.module.ts
+|   |   |   |-- module1.module.ts
 |   |-- app-routing.module.ts
 |   |-- app.component.ts
 |   |-- app.module.ts
@@ -104,3 +102,6 @@ src/
     - ✅ [Karma](https://karma-runner.github.io) for unit test.
 - 🐋 [**Docker Compose**](https://www.docker.com) for development and production.
 
+## Author
+
+- [@AndresOrozcoDev](https://github.com/AndresOrozcoDev)
