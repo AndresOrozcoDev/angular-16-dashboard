@@ -16,6 +16,7 @@
     .content {
       .link {
         .content{
+          text-decoration: none;
           padding: 10px 0 10px 16px !important;
           &.active{
             background: #323e55;
@@ -51,6 +52,7 @@
         transition: 0.3s;
         align-items: center;
         padding: 0 !important;
+        text-decoration: none;
         justify-content: center;
 
         &:hover {

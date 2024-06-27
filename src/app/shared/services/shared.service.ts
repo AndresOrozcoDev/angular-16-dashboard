@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
 
-  sharedBoolean: boolean = false;
+  private booleanSource = new Subject<boolean>();
+  boolean$ = this.booleanSource.asObservable();
 
-  constructor() {}
-
-  setBoolean(value: boolean) {
-    this.sharedBoolean = value;
+  sendBoolean(value: boolean) {
+    this.booleanSource.next(value);
   }
 
-  getBoolean() {
-    return this.sharedBoolean;
-  }
+  constructor() { }
 }

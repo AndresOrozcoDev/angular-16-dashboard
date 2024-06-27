@@ -4,27 +4,27 @@
             <div class="message">Test</div>
         </div>
         <div class="link">
-            <div class="content ps-4" [routerLink]="['/users']" [routerLinkActive]="'active'">
+            <a class="content ps-4" (click)="goTo('users')" [routerLinkActive]="'active'">
                 <div class="subtitle">Users</div>
-            </div>
+            </a>
         </div>
         <div class="section ps-2 pt-4">
             <div class="message">Market</div>
         </div>
         <div class="link">
-            <div class="content ps-4" [routerLink]="['/products']" [routerLinkActive]="'active'">
+            <a class="content ps-4" (click)="goTo('products')" [routerLinkActive]="'active'">
                 <div class="subtitle">Products</div>
-            </div>
+            </a>
         </div>
         <div class="link">
-            <div class="content ps-4" [routerLink]="['/categories']" [routerLinkActive]="'active'">
+            <a class="content ps-4" (click)="goTo('categories')" [routerLinkActive]="'active'">
                 <div class="subtitle">Categories</div>
-            </div>
+            </a>
         </div>
         <div class="link">
-            <div class="content ps-4" [routerLink]="['/supermarkets']" [routerLinkActive]="'active'">
+            <a class="content ps-4" (click)="goTo('supermarkets')" [routerLinkActive]="'active'">
                 <div class="subtitle">Supermarkets</div>
-            </div>
+            </a>
         </div>
         
         <div class="footer">
