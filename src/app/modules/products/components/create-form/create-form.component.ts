@@ -63,7 +63,7 @@ export class CreateFormComponent {
       
       this.productsServices.postProduct(ProductDefault).subscribe(
         (resp) => {
-          this.notifyService.notify('Product created.', 'success');
+          this.notifyService.notify(resp.message, 'success');
           this.refresh.emit(true);
         },
         (error) => {

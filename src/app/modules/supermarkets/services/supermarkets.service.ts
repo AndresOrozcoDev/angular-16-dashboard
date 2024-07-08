@@ -28,4 +28,12 @@ export class SupermarketsService {
     return this.http.post<SupermarketResponse>(this.urlBase, name, {headers: headers})
   }
 
+  deleteSupermarket(SupermarketID?: number): Observable<SupermarketResponse> {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'API_KEY': 'development'
+    });    
+    return this.http.delete<SupermarketResponse>(this.urlBase + "/" + SupermarketID, {headers: headers})
+  }
+
 }

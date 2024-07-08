@@ -28,4 +28,12 @@ export class CategoriesService {
     return this.http.post<CategoryResponse>(this.urlBase, name, {headers: headers})
   }
 
+  deleteCategory(categorytID?: number): Observable<CategoryResponse> {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'API_KEY': 'development'
+    });    
+    return this.http.delete<CategoryResponse>(this.urlBase + "/" + categorytID, {headers: headers})
+  }
+
 }

@@ -32,7 +32,7 @@
                         <td>{{product.created}}</td>
                         <td>{{product.supermarket_id}}</td>
                         <td>{{product.category_id}}</td>
-                        <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
+                        <td class="text-center"><i class="icon fa-solid fa-xmark" (click)="remove(product.id)" title="Remove" aria-hidden="true"></i></td>
                     </tr>
                 </table>
                 <p *ngIf="products.length === 0" class="message message--error text-center">NOT FOUND DATA</p>

@@ -39,4 +39,14 @@ export class CategoriesComponent {
     this.modalComponent.closeModal();
   }
 
+  remove(categoryID?: number) {
+    this.categoriesService.deleteCategory(categoryID).subscribe( (resp) => {
+      this.refresh();
+      this.notifyService.notify(resp.message, 'success');
+    }, (error) => {
+      this.notifyService.notify(error.message, 'error');
+      console.error(error);
+    })
+  }
+
 }

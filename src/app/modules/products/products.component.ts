@@ -47,4 +47,14 @@ export class ProductsComponent {
     this.modalComponent.closeModal();
   }
 
+  remove(productID?: number) {
+    this.productsService.deleteProduct(productID).subscribe( (resp) => {
+      this.refresh();
+      this.notifyService.notify(resp.message, 'success');
+    }, (error) => {
+      this.notifyService.notify(error.message, 'error');
+      console.error(error);
+    })
+  }
+
 }

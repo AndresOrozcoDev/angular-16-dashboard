@@ -27,4 +27,12 @@ export class ProductsService {
     });    
     return this.http.post<ProductResponse>(this.urlBase, product, {headers: headers})
   }
+
+  deleteProduct(productID?: number): Observable<ProductResponse> {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'API_KEY': 'development'
+    });    
+    return this.http.delete<ProductResponse>(this.urlBase + productID, {headers: headers})
+  }
 }

@@ -22,7 +22,7 @@
                     <tr *ngFor="let supermarket of supermarkets">
                         <td><input type="checkbox" id="name"><label for="name">{{supermarket.id}}</label></td>
                         <td>{{supermarket.name}}</td>
-                        <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
+                        <td class="text-center"><i class="icon fa-solid fa-xmark" (click)="remove(supermarket.id)" title="Remove" aria-hidden="true"></i></td>
                     </tr>
                 </table>
                 <p *ngIf="supermarkets.length === 0" class="message message--error text-center">NOT FOUND DATA</p>

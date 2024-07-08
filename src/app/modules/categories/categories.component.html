@@ -22,7 +22,7 @@
                     <tr *ngFor="let category of categories">
                         <td><input type="checkbox" id="name"><label for="name">{{category.id}}</label></td>
                         <td>{{category.name}}</td>
-                        <td class="text-center"><i class="icon fa-solid fa-ellipsis-vertical" title="More" aria-hidden="true"></i></td>
+                        <td class="text-center"><i class="icon fa-solid fa-xmark" (click)="remove(category.id)" title="Remove" aria-hidden="true"></i></td>
                     </tr>
                 </table>
                 <p *ngIf="categories.length === 0" class="message message--error text-center">NOT FOUND DATA</p>

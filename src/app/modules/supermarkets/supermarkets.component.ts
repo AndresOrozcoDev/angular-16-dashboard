@@ -39,4 +39,14 @@ export class SupermarketsComponent {
     this.modalComponent.closeModal();
   }
 
+  remove(SupermarketID?: number) {
+    this.supermarketsService.deleteSupermarket(SupermarketID).subscribe( (resp) => {
+      this.refresh();
+      this.notifyService.notify(resp.message, 'success');
+    }, (error) => {
+      this.notifyService.notify(error.message, 'error');
+      console.error(error);
+    })
+  }
+
 }
