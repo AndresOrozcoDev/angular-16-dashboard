@@ -1,0 +1,28 @@
+<div class="panel">
+    <div class="row panel__row">
+        <div class="column panel__column">
+            <div class="card gap-4">
+                <div class="card__picture">
+                    <img src="../../../assets/img/avatar_profile.jpeg" class="avatar" alt="Avatar Profile">
+                    <label for="fileInput" class="file-label">
+                        <i class="icon fa-solid fa-camera-rotate" aria-hidden="true" title="Change"></i>
+                    </label>
+                    <input id="fileInput" type="file" style="display: none;" (change)="changePicture($event)">
+                </div>
+                <div class="card__form">
+                    <form class="mt-4 p-4">
+                        <p class="title">Personal information</p>
+                        <div class="form_group d-flex flex-column gap-2 mt-2">
+                            <label for="profile_fullName">Full name</label>
+                                <input type="text" id="profile_fullName" name="profile_fullName" formControlName="fullName" autocomplete="off"  inputmode="text">
+                        </div>
+                        <div class="form_group d-flex flex-column gap-2 mt-2">
+                            <label for="profile_email">Email</label>
+                                <input type="text" id="profile_email" name="profile_email" formControlName="email" autocomplete="off"  inputmode="text">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'users', pathMatch: 'full', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule), canActivate: [authGuard] },
   { path: 'categories', loadChildren: () => import('./modules/categories/categories.module').then(m => m.CategoriesModule), canActivate: [authGuard] },
   { path: 'supermarkets', loadChildren: () => import('./modules/supermarkets/supermarkets.module').then(m => m.SupermarketsModule), canActivate: [authGuard] },
+  { path: 'profile', loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule) },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

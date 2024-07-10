@@ -1,0 +1,44 @@
+@import '../../../styles.scss';
+
+.panel {
+
+    &__row {
+        padding-block: 1.5rem;
+    }
+
+    &__column {
+
+        .card {
+            border: none;
+            margin-inline: auto;
+            width: min(100% - 40px, 400px);
+            position: relative;
+
+            &__picture {
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+                img {
+                    border-radius: 50%;
+                    width: 10rem;
+                }
+
+                i {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+
+                .file-label {
+                    display: inline-block;
+                }
+            }
+
+            &__form {
+                border-radius: $border-radius;
+                border: 1px solid $gray-dark-color;
+            }
+        }
+    }
+}
