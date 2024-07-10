@@ -1,12 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
-import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
+
 import { Product } from './models/products';
-import { ProductsService } from './services/products.service';
-import { NotifyService } from 'src/app/shared/services/notify.service';
-import { CategoriesService } from '../categories/services/categories.service';
-import { SupermarketsService } from '../supermarkets/services/supermarkets.service';
 import { Category } from '../categories/models/categories';
+import { ProductsService } from './services/products.service';
 import { Supermarket } from '../supermarkets/models/supermarkets';
+import { NotifyService } from 'src/app/shared/services/notify.service';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'app-products',
@@ -22,9 +21,7 @@ export class ProductsComponent {
 
   constructor( 
     private productsService: ProductsService, 
-    private notifyService: NotifyService,
-    private categoriesService: CategoriesService,
-    private supermarketsService: SupermarketsService
+    private notifyService: NotifyService
     ) {
     this.getProducts();
   }

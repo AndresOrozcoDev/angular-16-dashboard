@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
-import { NotifyService } from 'src/app/shared/services/notify.service';
-import { CategoriesService } from './services/categories.service';
+
 import { Category } from './models/categories';
+import { CategoriesService } from './services/categories.service';
+import { NotifyService } from 'src/app/shared/services/notify.service';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'app-categories',

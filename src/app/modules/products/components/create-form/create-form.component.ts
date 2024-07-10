@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Category } from 'src/app/modules/categories/models/categories';
-import { CategoriesService } from 'src/app/modules/categories/services/categories.service';
-import { Supermarket } from 'src/app/modules/supermarkets/models/supermarkets';
-import { SupermarketsService } from 'src/app/modules/supermarkets/services/supermarkets.service';
-import { NotifyService } from 'src/app/shared/services/notify.service';
-import { ProductsService } from '../../services/products.service';
+
 import { Product } from '../../models/products';
+import { ProductsService } from '../../services/products.service';
+import { NotifyService } from 'src/app/shared/services/notify.service';
+import { Category } from 'src/app/modules/categories/models/categories';
+import { Supermarket } from 'src/app/modules/supermarkets/models/supermarkets';
+import { CategoriesService } from 'src/app/modules/categories/services/categories.service';
+import { SupermarketsService } from 'src/app/modules/supermarkets/services/supermarkets.service';
 
 @Component({
   selector: 'app-create-form',
@@ -48,8 +49,7 @@ export class CreateFormComponent {
   }
 
   createProduct() {
-    // debugger
-    // if (this.createProductForm.valid) {
+    if (this.createProductForm.valid) {
       const ProductDefault = {
         name: this.createProductForm.value.name || '',
         price: Number(this.createProductForm.value.price) || 0,
@@ -59,20 +59,20 @@ export class CreateFormComponent {
         category_id: Number(this.createProductForm.value.category_id) || 0,
         supermarket_id: Number(this.createProductForm.value.supermarket_id) || 0
       };
-      console.log(ProductDefault);
       
       this.productsServices.postProduct(ProductDefault).subscribe(
         (resp) => {
           this.notifyService.notify(resp.message, 'success');
           this.refresh.emit(true);
+          this.createProductForm.reset();
         },
         (error) => {
-          this.notifyService.notify('Failed to create product.', 'error');
+          this.notifyService.notify(error.message, 'error');
         }
       );
-    // } else {
-    //   this.notifyService.notify('Incorrect data.', 'error');
-    // }
+    } else {
+      this.notifyService.notify('Incorrect data.', 'error');
+    }
   }
 
   getCategories() {

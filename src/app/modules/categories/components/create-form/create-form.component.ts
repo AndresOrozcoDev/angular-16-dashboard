@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NotifyService } from 'src/app/shared/services/notify.service';
+
 import { CategoriesService } from '../../services/categories.service';
+import { NotifyService } from 'src/app/shared/services/notify.service';
 
 @Component({
   selector: 'app-create-form',
@@ -15,17 +16,20 @@ export class CreateFormComponent {
   });
   @Output() refresh: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private notifyService: NotifyService, private categoriesServices: CategoriesService) { }
+  constructor(
+    private notifyService: NotifyService, 
+    private categoriesServices: CategoriesService) { }
 
   createCategory() {    
     if(this.createCategoryForm.valid) {
       const categoryName = this.createCategoryForm.value.category ?? 'defaultCategoryName';
       this.categoriesServices.postCategories(categoryName).subscribe( (resp) => {
-        this.notifyService.notify('Category created.', 'success');
+        this.notifyService.notify(resp.message, 'success');
         this.refresh.emit(true);
+        this.createCategoryForm.reset();
       },
       (error) => {
-        this.notifyService.notify('Failed to create category.', 'error');
+        this.notifyService.notify(error.message, 'error');
       })
     } else {
       this.notifyService.notify('Incorrect data.', 'error');

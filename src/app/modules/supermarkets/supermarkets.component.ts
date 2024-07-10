@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
+
 import { Supermarket } from './models/supermarkets';
-import { NotifyService } from 'src/app/shared/services/notify.service';
 import { SupermarketsService } from './services/supermarkets.service';
+import { NotifyService } from 'src/app/shared/services/notify.service';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'app-supermarkets',
