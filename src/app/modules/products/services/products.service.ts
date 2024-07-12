@@ -2,13 +2,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product, ProductResponse } from '../models/products';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  urlBase = 'https://backend-fastapi-python.azurewebsites.net/api/product/';
+  urlBase = environment.backendUrl + '/api/product/';
 
   constructor(private http: HttpClient) { }
 
