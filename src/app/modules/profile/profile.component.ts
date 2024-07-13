@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ProfileService } from './services/profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private profileServices: ProfileService) { }
 
   changePicture(event: any) {
     const selectedFiles = event.target.files;
@@ -20,20 +21,16 @@ export class ProfileComponent {
         const formData = new FormData();
         formData.append('file', file, file.name);
 
-        this.uploadFile(formData);
-      }
-    }
-  }
+        // this.uploadFile(formData);
 
-  uploadFile(formData: FormData) {
-    this.http.post('http://localhost:8080/upload', formData).subscribe(
-      response => {
-        console.log('Upload successful', response);
+        this.profileServices.uploadPhoto(formData).subscribe( (resp) => {
+          console.log('Upload successful', resp);
       },
       error => {
         console.error('Upload failed', error);
-      }
-    );
+      })
+    }
+  }
   }
 
 }
