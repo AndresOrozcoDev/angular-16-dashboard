@@ -1,6 +1,8 @@
 # Angular 16 Dashboard
 
-User dashboard panel.
+Angular 16 based project to demonstrate basic and advanced knowledge of the framework.
+
+It is a user panel for the management and administration of products, categories and supermarkets.
 
 ## Requirements
 
@@ -8,6 +10,20 @@ Make sure you have the following programs installed before running the applicati
 
 - [Node (v22.2.0)](https://nodejs.org/en)
 - [Angular CLI (v16.2.10)](https://angular.io/cli)
+- [Git (Latest)](https://git-scm.com/)
+
+## Install
+
+Run the next command for install and setting project.
+
+```bash
+git clone https://github.com/AndresOrozcoDev/angular-16-dashboard.git
+cd angular-16-dashboard.git
+```
+
+```bash
+npm i
+```
 
 ## Development server
 
@@ -27,7 +43,7 @@ ng g m modules/mod# --route mod# --module app.module.ts
 
 ```
 
-## Build
+## Deployment
 
 Run the next command for build the project. The build artifacts will be stored in the `dist/` directory.
 
@@ -68,7 +84,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Architecture
 
 ```bash
-
 src/
 |-- app/
 |   |-- core/
@@ -100,8 +115,8 @@ src/
     - 🔍 [Font awesome](https://fontawesome.com/search?m=free&o=r) for icons.
     - 🧰 [Google fonts](https://fonts.google.com/specimen/DM+Sans) for family font.
     - ✅ [Karma](https://karma-runner.github.io) for unit test.
-- 🐋 [**Docker Compose**](https://www.docker.com) for development and production.
+- 🐋 [**Docker**](https://www.docker.com) for development and production.
 
 ## Author
 
-- [@AndresOrozcoDev](https://github.com/AndresOrozcoDev)
+[@AndresOrozcoDev](https://github.com/AndresOrozcoDev)
