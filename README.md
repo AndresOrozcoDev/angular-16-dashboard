@@ -43,7 +43,7 @@ ng g m modules/mod# --route mod# --module app.module.ts
 
 ```
 
-## Build
+## Deployment
 
 Run the next command for build the project. The build artifacts will be stored in the `dist/` directory.
 
