@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SupermarketsService {
 
-  urlBase = environment.backendUrl + '/api/supermarket';
+  urlBase = environment.backendUrlFastapi + '/api/supermarket';
 
   constructor(private http: HttpClient) { }
 

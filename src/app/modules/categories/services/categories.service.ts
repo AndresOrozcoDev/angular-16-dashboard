@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CategoriesService {
 
-  urlBase = environment.backendUrl + '/api/category';
+  urlBase = environment.backendUrlFastapi + '/api/category';
 
   constructor(private http: HttpClient) { }
 
