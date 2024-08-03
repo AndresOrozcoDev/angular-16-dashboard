@@ -28,7 +28,7 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist/angular-16-dashboard /usr/share/nginx/html
 
 # Exponer el puerto 80 para acceder al servidor web
-EXPOSE 80
+EXPOSE 4200
 
 # Comando para iniciar el servidor Nginx en primer plano
 CMD ["nginx", "-g", "daemon off;"]
