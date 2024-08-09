@@ -12,3 +12,9 @@
 *.tmp
 *.bak
 .DS_Store
+
+# Otros archivos
+.dockerignore
+.git
+.gitignore
+Dockerfile
